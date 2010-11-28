@@ -1,0 +1,129 @@
+
+@font-face {
+    font-family: "Museo500";
+    src: url("../Museo500.otf");
+}
+/*
+á : &aacute;
+é : &eacute;
+...
+*/
+
+/*.columna {background-color:transparent;outline:0px solid red; min-height:800px;}*/
+/*body {background-image:url(../images/background.png);}*/
+body .wrapper{width:1020px;margin:0 auto;background: url(../images/faux-column2.png) repeat-y 50% 0;}
+body .bottom{width:1020px;height:46px;margin:0 auto;background: url(../images/faux-column-bottom.png) repeat-y 50% 0;}
+body {background: url(../images/background.png) 0 0;}
+
+.hr{display:block;clear:both;margin:0 auto;}
+.hr.fatline{background:url(../images/linea-gorda.png) no-repeat scroll center; height:6px; width:480px; }
+.hr.thinline{background:url(../images/linea-fina.png) no-repeat scroll center; height:2px; width:480px; position:relative; top:0; left:8px;}
+
+
+
+
+/*#col-izquierda {-webkit-box-shadow:10px 0px 170px 0px #444; -moz-box-shadow:10px 0px 100px 0px #444;}*/
+#col-izquierda a{color:black; text-decoration:none}
+#col-izquierda a:hover{color:#0396ad}
+#col-izquierda ul.menu {list-style-type:square;font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif; font-size:1.3em;margin:20px; font-weight:bold;}
+#col-izquierda div.follow{font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif; font-size:1.3em; margin:30px; padding:0px}
+#col-izquierda div.follow p{margin:0;padding:0;}
+#col-izquierda div.politica{font-size:0.8em}  
+#col-izquierda div.politica ul{list-style-type:none; margin:30px; padding:0px}
+#col-izquierda div.politica p{margin:0 0 0 10px; padding:0 0 0 20px}
+#col-izquierda div.follow ul{margin-left:0; list-style-type:none}
+#col-izquierda div.follow ul li{display:inline}
+
+
+
+
+
+
+
+/*#col-centro {-webkit-box-shadow:10px 0px 50px 0px #444; -moz-box-shadow:10px 0px 40px 0px #444; padding:0px;position:relative;}*/
+#col-centro .header a{text-decoration:none; color:black}
+#col-centro .header ul{float:right; list-style-type:none; font-size:0.8em; margin-top:15px; margin-bottom:25px}
+#col-centro .header .menu{list-style-type:none; color:#0396ad; margin:5px 20px}
+#col-centro .header .menu li{display:inline; font-size:1.5em}
+#col-centro .header .menu li a{text-decoration:none; color:#0396ad}
+/*we hide the menu*/
+#col-centro .header .menu {visibility:hidden;}
+
+
+#col-centro .contents {position:relative; padding-bottom: 100px; min-height:367px}
+#col-centro .contents h1 {margin:10px 10px; color:#0396ad; font-size:1.7em;font-weight:bold;}
+#col-centro .contents p{margin:20px 20px 10px 20px; font-size:1em; font-weight:bold}
+#col-centro .contents ul{list-style-type:none; font-size:1em; margin:0; padding:10px 0 0 40px; font-weight:bold}
+#col-centro .contents em{color:#0396ad; font-style:normal}
+
+#col-centro .footer {text-align:center; position:absolute; left:0;bottom:10px;font-size:0.8em;}
+#col-centro .footer p{margin:0;}
+#col-centro .footer em{font-style:normal;color:#0396ad;font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;}
+
+
+
+#col-centro .contents .stateofart ul{float:left}
+#col-centro .contents .stateofart img.trama{float:right; margin-right:60px}
+
+#col-centro .contents .garantiasoa ul{padding:10px 0 10px 40px}
+#col-centro .contents .garantiasoa ul li{padding:0 0 20px 0}
+#col-centro .contents .garantiasoa img{margin:0 auto; display:block}
+
+
+
+#col-centro .contents .contacto ul{float:left; font-size:0.8em; margin:10px 0 0 30px;padding:0;width:205px;}
+#col-centro .contents .contacto ul li{padding:12px 0 0 0;}
+#col-centro .contents .contacto ul li a{text-decoration:none; color:#0396ad}
+#col-centro .contents .contacto img{float:right; margin:0 10px 0 0;padding:0}
+
+#col-centro .contents .eressoa ul{list-style-type:disc; margin: 0 0 10px 25px}
+#col-centro .contents .eressoa img{margin:0 auto; display:block}
+#col-centro .contents .eressoa p.mail{margin:30px 0 40px 20px}
+
+
+#col-centro .contents .goodstaff h2.categorias a{color:#0396ad; text-decoration:none; font-size:1.3em; font-weight:bold}
+#col-centro .contents .goodstaff h2.categorias{color:#0396ad; font-size:1em; margin:20px 0 0 20px}
+#col-centro .contents .goodstaff ul li a{text-decoration:none; color:#0396ad}
+
+
+#col-centro .contents .goodlista ul li.azafata{margin: 10px; padding: 0}
+#col-centro .contents .goodlista ul#azafatas {margin:30px 0 0 0; padding:0}
+#col-centro .contents .goodlista ul {margin: 0; padding: 0}
+#col-centro .contents .goodlista img.pequena {margin: 0 5px 0 0; float: left}
+#col-centro .contents .goodlista img.grande {margin: 0 5px 0 0; float: left}
+#col-centro .contents .goodlista .descripcion {float: left; width: 220px}
+#col-centro .contents .goodlista h2 {color:#0396ad; font-size:1.5em;font-weight:bold; margin:0; padding:0}
+
+
+#col-centro .contents .blog h2{color:#0396ad; font-style:italic; font-size:1em; margin:0 10px; position:relative; left:0; bottom:10px}
+#col-centro .contents .blog p{margin:0 0 0 10px}
+#col-centro .contents .blog .imagenes ul li{display: inline}
+#col-centro .contents .blog .imagenes ul{margin: 0 0 20px 0; padding:0}
+#col-centro .contents .blog .imagenes{margin: 20px 0 20px 10px}
+.hr.blogseparator{background: url(../images/blog-hr.png) no-repeat scroll center; height:3px; margin:10px auto; width:460px; position:relative; left:-20px; bottom:0}
+
+#col-centro .contents .enconstruccion h1{text-align:center; height:400px; line-height:400px;position:relative;left:1px}
+
+
+
+
+
+
+
+
+
+
+/*#col-derecha   {-webkit-box-shadow:10px 0px 50px 0px #444; -moz-box-shadow:10px 0px 40px 0px #444; padding:0px;}*/
+#col-derecha ul{padding:0px; margin:70px auto; width:162px; list-style-type:none; border:1px solid #0396ad}
+#col-derecha ul li{border-bottom:2px dashed #0396ad; padding:10px}
+#col-derecha ul li.first{border-bottom:1px solid #0396ad; background-color:#0396ad; padding:20px 5px; font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;font-size:1.1em; color:white; text-align:center; font-weight:bold}
+#col-derecha ul li.last{border-bottom:0px}
+#col-derecha ul li .post-tit{margin-bottom:6px; font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif; color:#0396ad; font-style:italic}
+#col-derecha ul li .post-text{font-size:0.9em; line-height:1em; margin:0}
+#col-derecha ul a{text-decoration:none; font-size:0.9em; margin:0; color:#0396ad}
+
+/* borrar cuando este activo el blog */
+#col-derecha ul {background-image:url(../images/blog-en-obras.png);}
+#col-derecha ul li{visibility:hidden;}
+#col-derecha ul li.first{visibility:visible;}
+/* FIN: borrar cuando este activo el blog */
