@@ -2,11 +2,11 @@
     <img src="<?php soa_image('soa-staff.png') ?>" alt="SOA Staff"/>
     <ul class="menu">
         <li><a href="<?php bloginfo('url')?>">State of the art</a></li>
-        <li><a href="<?php echo(get_page_uri(get_page_by_title('Garantia SOA'))) ?>">Garant&iacute;a SOA</a></li>
-        <li><a href="<?php echo(get_page_uri(get_page_by_title('Good Staff'))) ?>">Good staff</a></li>
-        <li><a href="<?php echo(get_page_uri(get_page_by_title('Proximamente ...'))) ?>">Armario</a></li>
-        <li><a href="<?php echo(get_page_uri(get_page_by_title('Contacto'))) ?>">Contacto</a></li>
-        <li><a href="<?php echo(get_page_uri(get_page_by_title('Eres SOA?'))) ?>">Eres SOA?</a></li>
+        <li><a href="<?php page_url('Garantia SOA') ?>">Garant&iacute;a SOA</a></li>
+        <li><a href="<?php page_url('Good Staff') ?>">Good staff</a></li>
+        <li><a href="<?php page_url('Proximamente ...') ?>">Armario</a></li>
+        <li><a href="<?php page_url('Contacto') ?>">Contacto</a></li>
+        <li><a href="<?php page_url('Eres SOA?') ?>">Eres SOA?</a></li>
     </ul>
     <div class="follow">
         <p>Follow us</p>

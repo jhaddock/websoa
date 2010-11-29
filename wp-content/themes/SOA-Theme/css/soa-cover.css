@@ -1,0 +1,21 @@
+body {background: url(../images/background.png) 0 0;}
+
+/*#wrap {display: table; height: 90%; width: 100%;}
+#main {display: table-cell; vertical-align: middle; width: 100%; text-align:center;}
+body,html{height:100%;}
+#cover {padding:0;width:990px; height:786px;margin:0 auto;background-color:transparent;-webkit-box-shadow: 0px 0px 50px #555;-moz-box-shadow: 0px 0px 50px #555}*/
+
+#cover {padding:0;margin:0;width:990px; height:786px;position:absolute;left:50%;top:50%;margin:-393px 0 0 -495px;background-color:transparent;-webkit-box-shadow: 0px 0px 50px #555;-moz-box-shadow: 0px 0px 50px #555}
+
+#cover .header, .footer {background-color:white;width:990px;height:161px;}
+#cover .content {width:990px;height:464px;background-color:transparent}
+#cover .footer .logo{float:left; height:161px; }
+#cover .footer .logo img{margin-top:0px;}
+#cover .footer .contact{float:right; text-align:right;height:161px; line-height:200px; margin-right:40px;font-size:1.1em;font-weight:bold;}
+#cover .header ul {width:990px;margin:0;padding:0;height:161px;overflow:hidden;}
+#cover .header ul li{width:990px;margin:0;padding:0;text-align:center;height:161px;line-height:161px;font-size:4.5em;font-weight:bold;}
+#cover .header ul li.st1{color:#0396ad;}
+#cover .header ul li.st2{color:#91d3df;}
+#cover .header ul li.st3{color:#0396ad; font-weight:normal;font-style:italic;}
+#cover .header ul li.st5{font-style:italic;}
+
