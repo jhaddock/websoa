@@ -34,4 +34,7 @@ if (function_exists('register_sidebar')) {
 function soa_image($imgname) {
     echo(bloginfo('template_url') . '/images/' . $imgname);
 }
+function page_url($pagename) {
+    echo(bloginfo('url') . '/' . get_page_uri(get_page_by_title($pagename)));
+}
 ?>
