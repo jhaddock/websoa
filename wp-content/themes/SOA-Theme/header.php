@@ -35,15 +35,15 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	
 	<link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/screen.css'); ?>" type="text/css" />
-	<link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/soa.css'); ?>" type="text/css" />
 	<!--[if lt IE 8]><link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/ie.css'); ?>" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/soa.css'); ?>" type="text/css" />
 	<!--[if lt IE 8]><link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/soa-ie.css'); ?>" type="text/css" /><![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+        
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 	<?php wp_head(); ?>
-	
 </head>
 
 <body <?php body_class(); ?>>

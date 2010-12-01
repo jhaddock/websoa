@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "Museo500";
-    src: url("../Museo500.otf");
+    src: url("../assets/Museo500.otf");
 }
 /*
 á : &aacute;
@@ -95,12 +95,18 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .goodlista h2 {color:#0396ad; font-size:1.5em;font-weight:bold; margin:0; padding:0}
 
 
-#col-centro .contents .blog h2{color:#0396ad; font-style:italic; font-size:1em; margin:0 10px; position:relative; left:0; bottom:10px}
-#col-centro .contents .blog p{margin:0 0 0 10px}
-#col-centro .contents .blog .imagenes ul li{display: inline}
-#col-centro .contents .blog .imagenes ul{margin: 0 0 20px 0; padding:0}
-#col-centro .contents .blog .imagenes{margin: 20px 0 20px 10px}
-.hr.blogseparator{background: url(../images/blog-hr.png) no-repeat scroll center; height:3px; margin:10px auto; width:460px; position:relative; left:-20px; bottom:0}
+
+#col-centro .contents .blog #posts {padding:0}
+#col-centro .contents .blog #posts .post{width:420px; margin:0 auto}
+#col-centro .contents .blog .post h1 a{color:#0396ad;font-family: Times, serif;text-decoration: none;}
+#col-centro .contents .blog .post h2{font-family: Times, serif;color:#0396ad; font-style:italic; font-size:1em; margin:0 10px; position:relative; left:0; bottom:10px}
+#col-centro .contents .blog .post p{margin:0 0 0 10px}
+#col-centro .contents .blog .post .soa-gallery ul {margin: 20px 0; padding:0!important}
+#col-centro .contents .blog .post .soa-gallery ul li{display: inline; margin-right:5px; padding:0}
+.hr.blogseparator{background: url(../images/blog-hr.png) no-repeat scroll center; height:3px; margin:30px auto; width:460px; position:relative; left:-20px; bottom:0}
+
+
+
 
 #col-centro .contents .enconstruccion h1{text-align:center; height:400px; line-height:400px;position:relative;left:1px}
 

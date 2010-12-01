@@ -37,4 +37,115 @@ function soa_image($imgname) {
 function page_url($pagename) {
     echo(bloginfo('url') . '/' . get_page_uri(get_page_by_title($pagename)));
 }
+
+function soa_theme_setup() {
+	add_image_size('soa_blog_big',415,1480, true);
+}
+add_action( 'after_setup_theme', 'soa_theme_setup' );
+
+add_shortcode('soa_gallery', 'soa_gallery_shortcode');
+
+/**
+ * The Gallery shortcode.
+ *
+ * This implements the functionality of the Gallery Shortcode for displaying
+ * WordPress images on a post.
+ *
+ * @since 2.5.0
+ *
+ * @param array $attr Attributes attributed to the shortcode.
+ * @return string HTML content to display gallery.
+ */
+function soa_gallery_shortcode($attr) {
+	global $post, $wp_locale;
+
+	static $instance = 0;
+	$instance++;
+
+	// Allow plugins/themes to override the default gallery template.
+	$output = apply_filters('post_gallery', '', $attr);
+	if ( $output != '' )
+		return $output;
+
+	// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
+	if ( isset( $attr['orderby'] ) ) {
+		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
+		if ( !$attr['orderby'] )
+			unset( $attr['orderby'] );
+	}
+
+	extract(shortcode_atts(array(
+		'order'      => 'ASC',
+		'orderby'    => 'menu_order ID',
+		'id'         => $post->ID,
+		'size'       => 'thumbnail',
+		'include'    => '',
+		'exclude'    => ''
+	), $attr));
+
+	$id = intval($id);
+	if ( 'RAND' == $order )
+		$orderby = 'none';
+
+	if ( !empty($include) ) {
+		$include = preg_replace( '/[^0-9,]+/', '', $include );
+		$_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+
+		$attachments = array();
+		foreach ( $_attachments as $key => $val ) {
+			$attachments[$val->ID] = $_attachments[$key];
+		}
+	} elseif ( !empty($exclude) ) {
+		$exclude = preg_replace( '/[^0-9,]+/', '', $exclude );
+		$attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+	} else {
+		$attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
+	}
+
+	if ( empty($attachments) )
+		return '';
+
+	if ( is_feed() ) {
+		$output = "\n";
+		foreach ( $attachments as $att_id => $attachment )
+			$output .= wp_get_attachment_link($att_id, $size, true) . "\n";
+		return $output;
+	}
+	$selector = "soa-gallery-{$instance}";
+
+	$output = apply_filters('gallery_style', "
+		<div id='$selector' class='soa-gallery soa-galleryid-{$id}' data-btnPrev='gallery-prev-$instance' data-btnNext='gallery-next-$instance'>");
+        if (count($attachments) > 4){
+            
+            $output .= "<span id='gallery-next-$instance' class='gallery-next'>&#187;</span>";
+        }
+        $output .= "<ul>";
+
+	$i = 0;
+	foreach ( $attachments as $id => $attachment ) {
+		$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
+                $img_thumb_url = wp_get_attachment_image_src($id, 'thumbnail');
+                $img_url = wp_get_attachment_image_src($id, 'full');
+                $img_html = "<img src='$img_thumb_url[0]' data-orignal-image-url='$img_url[0]' width='$img_thumb_url[1]' height='$img_thumb_url[1]'/>";
+		$output .= "<li>$img_html</li>";
+	}
+
+	$output .= "</ul>\n";
+        if (count($attachments) > 4){
+            $output = "<span id='gallery-prev-$instance' class='gallery-prev'>&#171;</span>" . $output;
+        }
+        $first_attachment_id = array_keys($attachments);
+        $first_attachment_id = $first_attachment_id[1];
+        $img = wp_get_attachment_image_src($first_attachment_id,'soa_blog_big');
+//	$output .= "<img class='soa-gallery-show' src='$link[0]' width='$link[1]' height='$link[2]'/>";
+	$output .= "</div>";
+	$output .= "<img class='soa-gallery-show' src='$img[0]' width='415' />";
+
+
+
+	return $output;
+}
+
+
+
 ?>
