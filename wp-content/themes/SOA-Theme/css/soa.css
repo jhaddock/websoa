@@ -101,7 +101,11 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .blog .post h1 a{color:#0396ad;font-family: Times, serif;text-decoration: none;}
 #col-centro .contents .blog .post h2{font-family: Times, serif;color:#0396ad; font-style:italic; font-size:1em; margin:0 10px; position:relative; left:0; bottom:10px}
 #col-centro .contents .blog .post p{margin:0 0 0 10px}
-#col-centro .contents .blog .post .soa-gallery ul {margin: 20px 0; padding:0!important}
+#col-centro .contents .blog .post .gallery-prev,
+#col-centro .contents .blog .post .gallery-next{position:relative; top:65px; font-size: 1.4em;}
+#col-centro .contents .blog .post .gallery-prev{left:-10px}
+#col-centro .contents .blog .post .gallery-next{left:410px}
+#col-centro .contents .blog .post .soa-gallery ul {margin: 20px 0; padding:0!important;height:100px;overflow:hidden}
 #col-centro .contents .blog .post .soa-gallery ul li{display: inline; margin-right:5px; padding:0}
 .hr.blogseparator{background: url(../images/blog-hr.png) no-repeat scroll center; height:3px; margin:30px auto; width:460px; position:relative; left:-20px; bottom:0}
 

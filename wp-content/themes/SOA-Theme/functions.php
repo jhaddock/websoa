@@ -113,13 +113,11 @@ function soa_gallery_shortcode($attr) {
 	}
 	$selector = "soa-gallery-{$instance}";
 
-	$output = apply_filters('gallery_style', "
-		<div id='$selector' class='soa-gallery soa-galleryid-{$id}' data-btnPrev='gallery-prev-$instance' data-btnNext='gallery-next-$instance'>");
         if (count($attachments) > 4){
-            
+            $output = "<span id='gallery-prev-$instance' class='gallery-prev'>&#171;</span>";
             $output .= "<span id='gallery-next-$instance' class='gallery-next'>&#187;</span>";
         }
-        $output .= "<ul>";
+	$output .= "<div id='$selector' class='soa-gallery soa-galleryid-{$id}' data-btnprev='gallery-prev-$instance' data-btnnext='gallery-next-$instance'><ul>";
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
@@ -132,7 +130,7 @@ function soa_gallery_shortcode($attr) {
 
 	$output .= "</ul>\n";
         if (count($attachments) > 4){
-            $output = "<span id='gallery-prev-$instance' class='gallery-prev'>&#171;</span>" . $output;
+            
         }
         $first_attachment_id = array_keys($attachments);
         $first_attachment_id = $first_attachment_id[1];
