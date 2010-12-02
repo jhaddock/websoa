@@ -56,9 +56,10 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents ul{list-style-type:none; font-size:1em; margin:0; padding:10px 0 0 40px; font-weight:bold}
 #col-centro .contents em{color:#0396ad; font-style:normal}
 
-#col-centro .footer {text-align:center; position:absolute; left:0;bottom:10px;font-size:0.8em;}
-#col-centro .footer p{margin:0;}
-#col-centro .footer em{font-style:normal;color:#0396ad;font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;}
+.bottom {position:relative}
+.bottom .footer {text-align:center; position:absolute; left:262px;top:-20px;font-size:0.8em;}
+.bottom .footer p{margin:0;}
+.bottom .footer em{font-style:normal;color:#0396ad;font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;}
 
 
 
