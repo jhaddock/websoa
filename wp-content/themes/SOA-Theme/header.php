@@ -44,6 +44,8 @@
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 	<?php wp_head(); ?>
+        <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/jcarousellite1.0.1.js'); ?>'></script>
+        <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/soa.js'); ?>'></script>
 </head>
 
 <body <?php body_class(); ?>>

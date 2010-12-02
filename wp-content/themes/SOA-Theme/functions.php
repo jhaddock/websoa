@@ -135,11 +135,13 @@ function soa_gallery_shortcode($attr) {
         $first_attachment_id = array_keys($attachments);
         $first_attachment_id = $first_attachment_id[1];
         $img = wp_get_attachment_image_src($first_attachment_id,'soa_blog_big');
-//	$output .= "<img class='soa-gallery-show' src='$link[0]' width='$link[1]' height='$link[2]'/>";
 	$output .= "</div>";
 	$output .= "<img class='soa-gallery-show' src='$img[0]' width='415' />";
-
-
+        $output .= "
+        <script type='text/javascript'>
+        $(document).ready(function(){soa.init_gallery()});
+        </script>
+        ";
 
 	return $output;
 }

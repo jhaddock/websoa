@@ -105,7 +105,8 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .blog .post .gallery-next{position:relative; top:65px; font-size: 1.4em;}
 #col-centro .contents .blog .post .gallery-prev{left:-10px}
 #col-centro .contents .blog .post .gallery-next{left:410px}
-#col-centro .contents .blog .post .soa-gallery ul {margin: 20px 0; padding:0!important;height:100px;overflow:hidden}
+#col-centro .contents .blog .post .soa-gallery-show{margin:20px 0;}
+#col-centro .contents .blog .post .soa-gallery ul {margin:0; padding:0!important;height:100px;overflow:hidden}
 #col-centro .contents .blog .post .soa-gallery ul li{display: inline; margin-right:5px; padding:0}
 .hr.blogseparator{background: url(../images/blog-hr.png) no-repeat scroll center; height:3px; margin:30px auto; width:460px; position:relative; left:-20px; bottom:0}
 
@@ -124,15 +125,22 @@ body {background: url(../images/background.png) 0 0;}
 
 
 /*#col-derecha   {-webkit-box-shadow:10px 0px 50px 0px #444; -moz-box-shadow:10px 0px 40px 0px #444; padding:0px;}*/
-#col-derecha ul{padding:0px; margin:70px auto; width:162px; list-style-type:none; border:1px solid #0396ad}
-#col-derecha ul li{border-bottom:2px dashed #0396ad; padding:10px}
-#col-derecha ul li.first{border-bottom:1px solid #0396ad; background-color:#0396ad; padding:20px 5px; font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;font-size:1.1em; color:white; text-align:center; font-weight:bold}
-#col-derecha ul li.last{border-bottom:0px}
-#col-derecha ul li .post-tit{margin-bottom:6px; font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif; color:#0396ad; font-style:italic}
-#col-derecha ul li .post-text{font-size:0.9em; line-height:1em; margin:0}
-#col-derecha ul a{text-decoration:none; font-size:0.9em; margin:0; color:#0396ad}
+#col-derecha ul {padding:0px; margin:70px auto; width:162px; list-style-type:none;}
+#col-derecha ul li a{text-decoration:none; margin:0; color:#0396ad}
+#col-derecha ul.wp-categories li.first{font-size:1.3em;font-weight:bold;font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;}
+#col-derecha ul.wp-tag-cloud li{display:inline}
+#col-derecha ul.tags-header {margin:70px auto -85px auto}
+#col-derecha ul.tags-header li.first{font-size:1.3em;font-weight:bold;margin:0 0;font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;}
+#col-derecha ul.blog_resume{ border:1px solid #0396ad}
+#col-derecha ul.blog_resume li{border-bottom:2px dashed #0396ad; padding:10px}
+#col-derecha ul.blog_resume li.first {border-bottom:1px solid #0396ad; background-color:#0396ad; padding:20px 5px; font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;text-align:center; font-weight:bold}
+#col-derecha ul.blog_resume li.first a{font-size:1.1em; color:white; }
+#col-derecha ul.blog_resume li.last{border-bottom:0px}
+#col-derecha ul.blog_resume li .post-tit a{margin-bottom:6px; font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif; color:#0396ad; font-style:italic;font-size:1.1em}
+#col-derecha ul.blog_resume li .post-text{font-size:0.9em; line-height:1em; margin:0}
+#col-derecha ul.blog_resume a{font-size:0.9em;}
 
-/* borrar cuando este activo el blog */
+/* borrar cuando este activo el blog 
 #col-derecha ul {background-image:url(../images/blog-en-obras.png);}
 #col-derecha ul li{visibility:hidden;}
 #col-derecha ul li.first{visibility:visible;}

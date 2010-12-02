@@ -6,7 +6,7 @@
 
 <div class="blog">
     <ul id="posts">
-
+        <?php query_posts('posts_per_page=5-1') ?>
         <?php if (have_posts ()) : while (have_posts ()) : the_post(); ?>
             <li <?php post_class("post") ?> id="post-<?php the_ID(); ?>">
                 <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
