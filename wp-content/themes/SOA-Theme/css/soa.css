@@ -141,7 +141,7 @@ body {background: url(../images/background.png) 0 0;}
 #col-derecha ul.blog_resume li .post-text{font-size:0.9em; line-height:1em; margin:0}
 #col-derecha ul.blog_resume a{font-size:0.9em;}
 
-/* borrar cuando este activo el blog 
+/* borrar cuando este activo el blog */
 #col-derecha ul {background-image:url(../images/blog-en-obras.png);}
 #col-derecha ul li{visibility:hidden;}
 #col-derecha ul li.first{visibility:visible;}

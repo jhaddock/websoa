@@ -1,6 +1,7 @@
 <div id="col-derecha" class="span-5 last columna">
     <ul class="blog_resume">
-        <li class="first"><a href="<?php page_url('blog');?>">What's on? SOA blog</a></li>
+        <!--<li class="first"><a href="<?php page_url('blog');?>">What's on? SOA blog</a></li>-->
+        <li class="first"><a href="#">What's on? SOA blog</a></li>
         <?php 
             $numItems = count(query_posts('posts_per_page=3'));
             $i = 0;
