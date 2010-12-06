@@ -43,7 +43,7 @@ function soa_theme_setup() {
 }
 add_action( 'after_setup_theme', 'soa_theme_setup' );
 
-add_shortcode('soa_gallery', 'soa_gallery_shortcode');
+//add_shortcode('gallery', 'soa_gallery_shortcode');
 
 /**
  * The Gallery shortcode.
@@ -56,7 +56,8 @@ add_shortcode('soa_gallery', 'soa_gallery_shortcode');
  * @param array $attr Attributes attributed to the shortcode.
  * @return string HTML content to display gallery.
  */
-function soa_gallery_shortcode($attr) {
+
+function soa_gallery($attr) {
 	global $post, $wp_locale;
 
 	static $instance = 0;
@@ -142,9 +143,9 @@ function soa_gallery_shortcode($attr) {
         $(document).ready(function(){soa.init_gallery()});
         </script>
         ";
-
 	return $output;
 }
+
 
 
 

@@ -12,6 +12,8 @@
                 <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
                 <h2><?php the_time('F jS, Y') ?></h2>
                 <?php the_content(); ?>
+                <?php echo soa_gallery(array()); ?>
+
                 <!-- AddThis Button BEGIN -->
                 <div class="addthis_toolbox addthis_default_style ">
                     <a href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4cf0fabc7e891907" class="addthis_button_compact">Share</a>
