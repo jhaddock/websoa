@@ -82,9 +82,18 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .eressoa p.mail{margin:30px 0 40px 20px}
 
 
-#col-centro .contents .goodstaff h2.categorias a{color:#0396ad; text-decoration:none; font-size:1.3em; font-weight:bold}
+/*#col-centro .contents .goodstaff h2.categorias a{color:#0396ad; text-decoration:none; font-size:1.3em; font-weight:bold}
 #col-centro .contents .goodstaff h2.categorias{color:#0396ad; font-size:1em; margin:20px 0 0 20px}
-#col-centro .contents .goodstaff ul li a{text-decoration:none; color:#0396ad}
+#col-centro .contents .goodstaff ul li a{text-decoration:none; color:#0396ad}*/
+
+#col-centro .contents .goodstaff h2.categorias a{color:#0396ad; text-decoration:none; font-weight:bold}
+#col-centro .contents .goodstaff h2.categorias {color:#0396ad; font-size:1.3em; margin:50px 0 0 20px}
+#col-centro .contents .goodstaff h2.categorias.first {margin-top:20px}
+#col-centro .contents .goodstaff  ul li a{text-decoration:none; color:#0396ad}
+#col-centro .contents .goodstaff .otros ul{float:left;}
+#col-centro .contents .goodstaff .imagenes{text-align:center;}
+#col-centro .contents .goodstaff .imagenes img{margin:10px 0;}
+
 
 
 #col-centro .contents .goodlista ul li.azafata{margin: 10px; padding: 0}
