@@ -1,8 +1,11 @@
-
 @font-face {
-    font-family: "Museo500";
-    src: url("../assets/Museo500.otf");
+    font-family: 'Museo500';
+    src: url('../assets/Museo500.eot');
+    src: local('☺'), url('../assets/Museo500.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
 /*
 á : &aacute;
 é : &eacute;
