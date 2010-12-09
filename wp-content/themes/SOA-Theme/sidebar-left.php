@@ -1,7 +1,7 @@
 <div id="col-izquierda" class="span-5 columna">
     <img src="<?php soa_image('soa-staff.png') ?>" alt="SOA Staff"/>
     <ul class="menu">
-        <li><a href="<?php bloginfo('url')?>">State of the art</a></li>
+        <li><a href="<?php page_url('State of the art')?>">State of the art</a></li>
         <li><a href="<?php page_url('Garantia SOA') ?>">Garant&iacute;a SOA</a></li>
         <li><a href="<?php page_url('Good Staff') ?>">Good staff</a></li>
         <li><a href="<?php page_url('Proximamente ...') ?>">Armario</a></li>
