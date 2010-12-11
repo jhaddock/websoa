@@ -44,6 +44,8 @@ function soa_theme_setup() {
 add_action( 'after_setup_theme', 'soa_theme_setup' );
 
 add_shortcode('soa_gallery', 'soa_gallery_shortcode');
+add_shortcode('soa_random_img', 'soa_random_img_shortcode');
+add_shortcode('soa_random_img_mini_gallery', 'soa_random_img_mini_gallery_shortcode');
 
 /**
  * The Gallery shortcode.
@@ -146,6 +148,71 @@ function soa_gallery_shortcode($attr) {
 	return $output;
 }
 
+function html_tag($tag, $classes, $id, $content) {
+    $output = "<$tag";
+    if (!empty($classes))
+        $output .= " class='$classes' ";
+    if (!empty($id))
+        $output .= " id='$id' ";
+    $output .= ">";
+    $output .= $content . "</$tag>\n";
+
+    return $output;
+}
+
+function getDirectoryList($directory){
+    
+    if ($handle = opendir($directory)) {
+        $results = array();
+        /* This is the correct way to loop over the directory. */
+        while (false !== ($file = readdir($handle))) {
+          if ($file != "." && $file != "..") {
+            $results[] = $file;
+          }
+        }
+        closedir($handle);
+        return $results;
+    }
+    else{
+        echo "ERROR OPENING DIRECTORY: $directory";
+        return false;
+    }
+}
+
+
+function soa_random_img_shortcode(){
+    if ($imgs = getDirectoryList('./wp-content/uploads/soa_random_images')){
+//    if ($imgs = getDirectoryList('.')){
+        $i = rand(0,count($imgs)-1);
+        $path_to_image = home_url() . "/wp-content/uploads/soa_random_images/$imgs[$i]";
+        $html = "<img class='soa_random_img' src='$path_to_image' />";
+        return $html;
+    }
+    else{
+        return '';
+    }
+}
+
+function soa_random_img_mini_gallery_shortcode(){
+    if ($imgs = getDirectoryList('./wp-content/uploads/soa_random_images')){
+        $html = "";
+        foreach ($imgs as $img) {
+            $path_to_image = home_url() . "/wp-content/uploads/soa_random_images/$img";
+            $html .= html_tag("li", "", "", "<img src='$path_to_image' />");
+        }
+        $html = html_tag("ul", "", "", $html);
+        $html = html_tag("div", "", "soa_random_img_mini_gallery", $html);
+        $html .= "<script type='text/javascript'>
+                    $(document).ready(function(){
+                            $('#soa_random_img_mini_gallery').jCarouselLite({auto:2500, visible:3});
+                    });
+                  </script> ";
+        return $html;
+    }
+    else{
+        return '';
+    }
+}
 
 
 ?>

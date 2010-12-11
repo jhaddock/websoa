@@ -23,7 +23,9 @@ body {background: url(../images/background.png) 0 0;}
 .hr.thinline{background:url(../images/linea-fina.png) no-repeat scroll center; height:2px; width:480px; position:relative; top:0; left:8px;}
 
 
-
+#soa_random_img_mini_gallery {margin:0 auto;}
+#soa_random_img_mini_gallery li {margin-left: 10px;width:135px; height:135px}
+#soa_random_img_mini_gallery li img{border:1px solid black;}
 
 /*#col-izquierda {-webkit-box-shadow:10px 0px 170px 0px #444; -moz-box-shadow:10px 0px 100px 0px #444;}*/
 #col-izquierda a{color:black; text-decoration:none}
@@ -96,6 +98,7 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .goodstaff .otros ul{float:left;}
 #col-centro .contents .goodstaff .imagenes{text-align:center;}
 #col-centro .contents .goodstaff .imagenes img{margin:10px 0;}
+#col-centro .contents .goodstaff .imagenes img.soa_random_img{border:1px solid black}
 
 
 
