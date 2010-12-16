@@ -193,18 +193,26 @@ function soa_random_img_shortcode(){
     }
 }
 
-function soa_random_img_mini_gallery_shortcode(){
+function soa_random_img_mini_gallery_shortcode($args){
+    extract( shortcode_atts( array(
+      'visible' => 3,
+      'auto' => 2500,
+      'speed' => 500
+      ), $args ) );
     if ($imgs = getDirectoryList('./wp-content/uploads/soa_random_images')){
+
         $html = "";
+        shuffle($imgs);
         foreach ($imgs as $img) {
             $path_to_image = home_url() . "/wp-content/uploads/soa_random_images/$img";
             $html .= html_tag("li", "", "", "<img src='$path_to_image' />");
         }
         $html = html_tag("ul", "", "", $html);
-        $html = html_tag("div", "", "soa_random_img_mini_gallery", $html);
+        $div_random_class = rand(0,35000);
+        $html = html_tag("div", "$div_random_class", "soa_random_img_mini_gallery", $html);
         $html .= "<script type='text/javascript'>
                     $(document).ready(function(){
-                            $('#soa_random_img_mini_gallery').jCarouselLite({auto:2500, visible:3});
+                            $('.$div_random_class').jCarouselLite({auto:$auto, visible:$visible, speed:$speed});
                     });
                   </script> ";
         return $html;
