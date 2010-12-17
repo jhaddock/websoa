@@ -43,7 +43,7 @@ function soa_theme_setup() {
 }
 add_action( 'after_setup_theme', 'soa_theme_setup' );
 
-add_shortcode('soa_gallery', 'soa_gallery_shortcode');
+add_shortcode('gallery', 'soa_gallery_shortcode');
 add_shortcode('soa_random_img', 'soa_random_img_shortcode');
 add_shortcode('soa_random_img_mini_gallery', 'soa_random_img_mini_gallery_shortcode');
 

@@ -37,6 +37,7 @@
 	<link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/screen.css'); ?>" type="text/css" />
 	<!--[if lt IE 8]><link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/ie.css'); ?>" type="text/css" /><![endif]-->
 	<link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/soa.css'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/jquery.lightbox-0.5.css'); ?>" type="text/css" />
 	<!--[if lt IE 8]><link rel="stylesheet" href="<?php echo(bloginfo('stylesheet_directory').'/css/soa-ie.css'); ?>" type="text/css" /><![endif]-->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         
@@ -45,6 +46,7 @@
 
 	<?php wp_head(); ?>
         <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/jcarousellite1.0.1.js'); ?>'></script>
+        <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/jquery.lightbox-0.5.min.js'); ?>'></script>
         <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/soa.js'); ?>'></script>
 </head>
 

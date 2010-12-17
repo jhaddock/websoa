@@ -3,7 +3,6 @@
 <?php include (TEMPLATEPATH . '/col-centro-header.php'); ?>
 
 
-
 <div class="blog">
     <ul id="posts">
 

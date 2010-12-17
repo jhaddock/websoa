@@ -102,13 +102,16 @@ body {background: url(../images/background.png) 0 0;}
 
 
 
-#col-centro .contents .goodlista ul li.azafata{margin: 10px; padding: 0}
+#col-centro .contents .goodlista {margin-left: 10px; padding: 0}
+#col-centro .contents .goodlista ul#azafatas li.azafata{margin: 10px; padding: 0}
 #col-centro .contents .goodlista ul#azafatas {margin:30px 0 0 0; padding:0}
-#col-centro .contents .goodlista ul {margin: 0; padding: 0}
-#col-centro .contents .goodlista img.pequena {margin: 0 5px 0 0; float: left}
-#col-centro .contents .goodlista img.grande {margin: 0 5px 0 0; float: left}
-#col-centro .contents .goodlista .descripcion {float: left; width: 220px}
-#col-centro .contents .goodlista h2 {color:#0396ad; font-size:1.5em;font-weight:bold; margin:0; padding:0}
+#col-centro .contents .goodlista ul#azafatas {margin: 0; padding: 0}
+#col-centro .contents .goodlista ul#azafatas .pequena {width:108px; height:101px; overflow: hidden; margin: 0 5px 0 0; float: left}
+#col-centro .contents .goodlista ul#azafatas .pequena img {width:108px;}
+#col-centro .contents .goodlista ul#azafatas .grande {width:138px; height:101px; overflow: hidden; margin: 0 5px 0 0; float: left}
+#col-centro .contents .goodlista ul#azafatas .grande img{width:138px;}
+#col-centro .contents .goodlista ul#azafatas .descripcion {float: left; width: 200px; margin:0 0 0 10px; padding:0}
+#col-centro .contents .goodlista ul#azafatas h2 {color:#0396ad; font-size:1.5em;font-weight:bold; margin:0; padding:0}
 
 
 
@@ -125,6 +128,20 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .blog .post .soa-gallery ul {margin:0; padding:0!important;height:100px;overflow:hidden}
 #col-centro .contents .blog .post .soa-gallery ul li{display: inline; margin-right:5px; padding:0}
 .hr.blogseparator{background: url(../images/blog-hr.png) no-repeat scroll center; height:3px; margin:30px auto; width:460px; position:relative; left:-20px; bottom:0}
+
+
+
+
+
+#col-centro .contents .uniformesopciones .enlace h1{margin-bottom:20px; float:left}
+#col-centro .contents .uniformesopciones .enlace a{text-decoration:none; color:#0396ad; font-size:1.3em; float:right; margin-right:10px; padding:0}
+#col-centro .contents .uniformesopciones p{margin:0 30px;}
+#col-centro .contents .uniformesopciones ul li{float:left; margin:10px 10px 10px 0; text-align:center}
+#col-centro .contents .uniformesopciones ul a{text-decoration:none; color:#0396ad}
+#col-centro .contents .uniformesopciones ul img{display:block; margin-bottom:10px}
+
+
+
 
 
 
