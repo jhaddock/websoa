@@ -97,7 +97,8 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .goodstaff  ul li a{text-decoration:none; color:#0396ad}
 #col-centro .contents .goodstaff .otros ul{float:left;}
 #col-centro .contents .goodstaff .imagenes{text-align:center;}
-#col-centro .contents .goodstaff .imagenes img{margin:15px 0;}
+#col-centro .contents .goodstaff .imagenes img{margin:25px 0 25px 0;}
+#col-centro .contents .goodstaff .imagenes #soa_random_img_mini_gallery img{margin:15px 0;}
 
 
 
@@ -124,9 +125,11 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .blog .post .gallery-next{position:relative; top:65px; font-size: 1.4em;}
 #col-centro .contents .blog .post .gallery-prev{left:-10px}
 #col-centro .contents .blog .post .gallery-next{left:410px}
-#col-centro .contents .blog .post .soa-gallery-show{margin:20px 0;}
+#col-centro .contents .blog .post .soa-gallery-show{margin:10px 10px;}
+#col-centro .contents .blog .post .soa-gallery {margin:20px 0 0 10px;}
 #col-centro .contents .blog .post .soa-gallery ul {margin:0; padding:0!important;height:100px;overflow:hidden}
 #col-centro .contents .blog .post .soa-gallery ul li{display: inline; margin-right:5px; padding:0}
+#col-centro .contents .blog .post .addthis_toolbox {margin-left: 10px}
 .hr.blogseparator{background: url(../images/blog-hr.png) no-repeat scroll center; height:3px; margin:30px auto; width:460px; position:relative; left:-20px; bottom:0}
 
 
