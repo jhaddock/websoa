@@ -14,6 +14,7 @@
                             foreach($months as $month) :
                             ?>
                             <li><a href="<?php echo get_month_link($year, $month); ?>"><?php echo date( 'F', mktime(0, 0, 0, $month) );?></a>
+                                    <!--
                                     <ul class="by_day">
                                     <?	$days = $wpdb->get_col("SELECT DISTINCT DAY(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' AND MONTH(post_date) = '".$month."' AND YEAR(post_date) = '".$year."' ORDER BY post_date DESC");
                                             foreach($days as $day) :
@@ -21,6 +22,7 @@
                                             <li><a href="<?php echo get_day_link($year, $month, $day); ?>"><?php echo $day;?></a></li>
                                             <?php endforeach;?>
                                     </ul>
+                                    //-->
 
                             </li>
                             <?php endforeach;?>

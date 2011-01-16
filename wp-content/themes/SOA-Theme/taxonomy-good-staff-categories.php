@@ -5,7 +5,15 @@
 <div class="goodlista">
 
 <?php if (have_posts ()) : ?>
-    <h1>Good staff: Azafatas con idiomas</h1>
+    <h1>Good staff: 
+    <?php
+        $taxonomy_slug = 'good-staff-categories';
+        $term_slug = $wp_query->query_vars[$taxonomy_slug];
+        $term = get_term_by('slug', $term_slug, $taxonomy_slug);
+        $father_term = get_term_by('id', $term->parent, $taxonomy_slug);
+        echo $father_term->name . " " . $term->name;
+    ?>
+    </h1>
     <ul id="azafatas">
     <?php while (have_posts ()) : the_post(); ?>
     <?php
@@ -23,9 +31,11 @@
                 </a>
             </div>
             <div class="grande">
+                <?php if ($img2 != "") :?>
                 <a href="<?php echo wp_get_attachment_url($img2) ?>" title="<?php the_title(); ?>" class="lightbox">
                     <img src="<?php echo wp_get_attachment_thumb_url($img2) ?>"/>
                 </a>
+                <?php endif; ?>
             </div>
             <!--<div class="grande"><img src="<?php echo wp_get_attachment_thumb_url($img2) ?>"/></div> //-->
             <ul class="descripcion">
