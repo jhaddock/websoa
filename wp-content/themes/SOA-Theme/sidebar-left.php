@@ -4,9 +4,10 @@
         <li><a href="<?php page_url('State of the art')?>">State of the art</a></li>
         <li><a href="<?php page_url('Garantia SOA') ?>">Garant&iacute;a SOA</a></li>
         <li><a href="<?php page_url('Good Staff') ?>">Good staff</a></li>
-        <li><a href="<?php page_url('Proximamente ...') ?>">Armario</a></li>
+        <li><a href="<?php page_url('Armario') ?>">Armario</a></li>
         <li><a href="<?php page_url('Contacto') ?>">Contacto</a></li>
         <li><a href="<?php page_url('Eres SOA?') ?>">Eres SOA?</a></li>
+        <li><a href="<?php page_url('Blog') ?>">Blog</a></li>
     </ul>
     <div class="follow">
         <p>Follow us</p>
