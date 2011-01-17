@@ -3,6 +3,9 @@
 // Add RSS links to <head> section
 automatic_feed_links();
 
+add_theme_support( 'post-thumbnails', array( 'post', 'page', 'armario', 'Good Staff' ) ); // Add it for posts
+
+
 // Load jQuery
 if (!is_admin()) {
     wp_deregister_script('jquery');

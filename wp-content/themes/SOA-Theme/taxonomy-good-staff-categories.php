@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="grande">
-                <?php if ($img2 != "") :?>
+                <?php if (($img2 != "") && ($img2 != "0"))  :?>
                 <a href="<?php echo wp_get_attachment_url($img2) ?>" title="<?php the_title(); ?>" class="lightbox">
                     <img src="<?php echo wp_get_attachment_thumb_url($img2) ?>"/>
                 </a>
