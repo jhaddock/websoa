@@ -49,6 +49,7 @@ add_action( 'after_setup_theme', 'soa_theme_setup' );
 add_shortcode('gallery', 'soa_gallery_shortcode');
 add_shortcode('soa_random_img', 'soa_random_img_shortcode');
 add_shortcode('soa_random_img_mini_gallery', 'soa_random_img_mini_gallery_shortcode');
+add_shortcode('soa_random_img_mini_gallery2', 'soa_random_img_mini_gallery_shortcode2');
 
 /**
  * The Gallery shortcode.
@@ -151,13 +152,15 @@ function soa_gallery_shortcode($attr) {
 	return $output;
 }
 
-function html_tag($tag, $classes, $id, $content) {
-    $output = "<$tag";
+function html_tag($tag, $classes, $id, $content, $style='') {
+    $output = "\n<$tag";
     if (!empty($classes))
         $output .= " class='$classes' ";
     if (!empty($id))
         $output .= " id='$id' ";
-    $output .= ">";
+    if (!empty($style))
+        $output .= " style='$style' ";
+    $output .= ">\n\t";
     $output .= $content . "</$tag>\n";
 
     return $output;
@@ -232,38 +235,37 @@ function soa_random_img_mini_gallery_shortcode($args){
 
 function soa_random_img_mini_gallery_shortcode2($args){
     extract( shortcode_atts( array(
-      'visible' => 3,
-      'auto' => 2500,
-      'speed' => 500
+      'delay' => rand(3000,10000),
+      'transition' => rand(2000,3000)
       ), $args ) );
     if ($imgs = getDirectoryList('./wp-content/uploads/soa_random_images')){
         $div_random_class = rand(0,35000);
-        $html = "<div id='large_gallery_wrapper'  style='height:459px' >
-                    <div class='slideshow'  id='slideshow_$div_random_class' ></div>
-                 </div> ";
         shuffle($imgs);
         foreach ($imgs as $img) {
             $path_to_image = home_url() . "/wp-content/uploads/soa_random_images/$img";
-            $html .= html_tag("li", "", "", "<a class='thumb' href='$path_to_image'></a>");
+            $html .= html_tag("li", "", "", "<a class='thumb' href='$path_to_image' title='$img'>$img</a>");
         }
-        $html = html_tag("ul", "thumbs", "", $html);
+        $html = html_tag("ul", "thumbs", "", $html, "display:none;");
+        $html = html_tag("div", "thumbs", "$div_random_class", $html);
+        $html .= "<div id='large_gallery_wrapper' style='height:133px;widht:133px'>
+                    <div class='slideshow'  id='slideshow_$div_random_class' ></div>
+                 </div> ";
+//        echo $html;
 
-        $html = html_tag("div", "$div_random_class", "soa_random_img_mini_gallery", $html);
+//        $html = html_tag("div", "$div_random_class", "soa_random_img_mini_gallery", $html);
         $html .= "<script type='text/javascript'>
                     $(document).ready(function(){
-                            //$('.$div_random_class').jCarouselLite({auto:$auto, visible:$visible, speed:$speed});
-                            $('.$div_random_class').each(function(){
-                                $('.$div_random_class').galleriffic({
-                                    delay: 10000,
-                                    numThumbs:                 20, // The number of thumbnails to show page
-                                    preloadAhead:              20, // Set to -1 to preload all images
-                                    enableTopPager:            false,
-                                    enableBottomPager:         false,
-                                    imageContainerSel:         '#slideshow_$div_random_class',
-                                    autoStart:                 true, // Specifies whether the slideshow should be playing or paused when the page first loads
-                                    syncTransitions:           true
-                                })
-                            });
+                        $('#$div_random_class').galleriffic({
+                            imageContainerSel:         '#slideshow_$div_random_class',
+                            delay:                     $delay,
+                            preloadAhead:              -1, // Set to -1 to preload all images
+                            enableTopPager:            false,
+                            enableBottomPager:         false,
+                            autoStart:                 true, // Specifies whether the slideshow should be playing or paused when the page first loads
+                            syncTransitions:           false, // Specifies whether the out and in transitions occur simultaneously or distinctly
+                            defaultTransitionDuration: $transition // If using the default transitions, specifies the duration of the transitions
+
+                        });
                     });
                   </script> ";
         return $html;

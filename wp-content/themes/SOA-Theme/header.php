@@ -46,6 +46,7 @@
 
 	<?php wp_head(); ?>
         <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/jcarousellite1.0.1.js'); ?>'></script>
+        <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/jquery.galleriffic.js'); ?>'></script>
         <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/jquery.lightbox-0.5.min.js'); ?>'></script>
         <script type='text/javascript' src='<?php echo(bloginfo('stylesheet_directory').'/javascripts/soa.js'); ?>'></script>
 </head>
