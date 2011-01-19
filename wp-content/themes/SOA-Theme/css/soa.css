@@ -97,10 +97,8 @@ body {background: url(../images/background.png) 0 0;}
 #col-centro .contents .goodstaff  ul li a{text-decoration:none; color:#0396ad}
 #col-centro .contents .goodstaff .otros ul{float:left;}
 #col-centro .contents .goodstaff .imagenes{text-align:center;}
-#col-centro .contents .goodstaff .imagenes img{margin:25px 0 25px 0;}
+#col-centro .contents .goodstaff .imagenes img{margin:25px 0 5px 0;}
 #col-centro .contents .goodstaff .imagenes #soa_random_img_mini_gallery img{margin:15px 0;}
-
-
 
 
 #col-centro .contents .goodlista {margin-left: 10px; padding: 0}
