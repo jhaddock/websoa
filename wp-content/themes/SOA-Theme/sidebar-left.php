@@ -1,13 +1,13 @@
 <div id="col-izquierda" class="span-5 columna">
     <img src="<?php soa_image('soa-staff.png') ?>" alt="SOA Staff"/>
     <ul class="menu">
-        <li><a href="<?php page_url('State of the art')?>">State of the art</a></li>
-        <li><a href="<?php page_url('Garantia SOA') ?>">Garant&iacute;a SOA</a></li>
-        <li><a href="<?php page_url('Good Staff') ?>">Good staff</a></li>
-        <li><a href="<?php page_url('Armario') ?>">Armario</a></li>
-        <li><a href="<?php page_url('Contacto') ?>">Contacto</a></li>
-        <li><a href="<?php page_url('Eres SOA?') ?>">Eres SOA?</a></li>
-        <li><a href="<?php page_url('Blog') ?>">Blog</a></li>
+        <li><a href="<?php page_url('State of the art')?>"><?php _e('State of the art') ?></a></li>
+        <li><a href="<?php page_url('Garantia SOA') ?>"><?php _e('Garantía SOA') ?></a></li>
+        <li><a href="<?php page_url('Good Staff') ?>"><?php _e('Good staff') ?></a></li>
+        <li><a href="<?php page_url('Armario') ?>"><?php _e('Armario') ?></a></li>
+        <li><a href="<?php page_url('Contacto') ?>"><?php _e('Contacto') ?></a></li>
+        <li><a href="<?php page_url('Eres SOA?') ?>"><?php _e('Eres SOA?') ?></a></li>
+        <li><a href="<?php page_url('Blog') ?>"><?php _e('Blog</a></li>
     </ul>
     <div class="follow">
         <p>Follow us</p>
