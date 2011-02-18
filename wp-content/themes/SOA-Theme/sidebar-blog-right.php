@@ -1,12 +1,13 @@
 <div id="col-derecha" class="span-5 last columna">
 
     <ul class="archive by_year">
+		<li class="first">Eventos:</li>
     <?php
     /**/
     $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date DESC");
     foreach($years as $year) :
     ?>
-            <li class="first">Eventos:</li>
+
             <li><a href="<?php echo get_year_link($year); ?> "><?php echo $year; ?></a>
 
                     <ul class="by_month">
