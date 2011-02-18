@@ -6,12 +6,54 @@ automatic_feed_links();
 add_theme_support( 'post-thumbnails', array( 'post', 'page', 'armario', 'Good Staff' ) ); // Add it for posts
 
 
+/*
+add_action('init', 'my_custom_init');
+function my_custom_init() 
+{
+  $labels = array(
+    'name' => _x('Books', 'post type general name'),
+    'singular_name' => _x('Book', 'post type singular name'),
+    'add_new' => _x('Add New', 'book'),
+    'add_new_item' => __('Add New Book'),
+    'edit_item' => __('Edit Book'),
+    'new_item' => __('New Book'),
+    'view_item' => __('View Book'),
+    'search_items' => __('Search Books'),
+    'not_found' =>  __('No books found'),
+    'not_found_in_trash' => __('No books found in Trash'), 
+    'parent_item_colon' => '',
+    'menu_name' => 'Books'
+
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => true, 
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','editor','author','thumbnail','excerpt','comments')
+  ); 
+  register_post_type('book',$args);
+}
+*/
+
+
+
 // Load jQuery
 if (!is_admin()) {
     wp_deregister_script('jquery');
     wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"), false);
     wp_enqueue_script('jquery');
 }
+
+
+
 
 // Clean up the <head>
 function removeHeadLinks() {

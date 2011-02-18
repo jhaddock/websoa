@@ -7,7 +7,7 @@
         <li><a href="<?php page_url('Armario') ?>"><?php _e('Armario') ?></a></li>
         <li><a href="<?php page_url('Contacto') ?>"><?php _e('Contacto') ?></a></li>
         <li><a href="<?php page_url('Eres SOA?') ?>"><?php _e('Eres SOA?') ?></a></li>
-        <li><a href="<?php page_url('Blog') ?>"><?php _e('Blog</a></li>
+        <li><a href="<?php page_url('Blog') ?>"><?php _e('Blog') ?></a></li>
     </ul>
     <div class="follow">
         <p>Follow us</p>

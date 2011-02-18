@@ -22,6 +22,9 @@
 <script type='text/javascript'>
 	$(document).ready(function(){
 		$("#cover .header").jCarouselLite({auto:2500, visible:1});
+                $(".content").click(function(){
+                    window.location = "state-of-the-art";
+                });
 	});
 </script>
 
