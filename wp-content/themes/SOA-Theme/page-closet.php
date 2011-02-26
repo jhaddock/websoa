@@ -1,4 +1,4 @@
-<!--This file has to be identical to page-closet-->
+<!--This file has to be identical to page-armario-->
 <?php get_header(); ?>
 <?php get_sidebar('left'); ?>
 <?php include (TEMPLATEPATH . '/col-centro-header.php'); ?>
@@ -7,7 +7,7 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <div class="enlace clearfix">
-        <h1>Uniformes</h1>
+        <h1>Uniforms</h1>
     </div>
     <?php the_content(); ?>
     <ul class="clearfix">
