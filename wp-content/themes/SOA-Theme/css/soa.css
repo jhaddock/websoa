@@ -47,7 +47,11 @@ body {background: url(../images/background.png) 0 0;}
 
 /*#col-centro {-webkit-box-shadow:10px 0px 50px 0px #444; -moz-box-shadow:10px 0px 40px 0px #444; padding:0px;position:relative;}*/
 #col-centro .header a{text-decoration:none; color:black}
-#col-centro .header ul{float:right; list-style-type:none; font-size:0.8em; margin-top:15px; margin-bottom:25px}
+/*#col-centro .header ul{float:right; list-style-type:none; font-size:0.8em; margin-top:15px; margin-bottom:25px}*/
+#col-centro .header #lang_sel_list{position:static;float:right; list-style-type:none; font-size:0.8em; margin:0 10px 15px 0; width:auto}
+#col-centro .header #lang_sel_list ul {border:0; width:auto}
+#col-centro .header #lang_sel_list ul li{width:auto; float :none; position:static}
+#col-centro .header #lang_sel_list ul li a{border:0 !important; padding: 0; margin:0;  width:auto;}
 #col-centro .header .menu{list-style-type:none; color:#0396ad; margin:5px 20px}
 #col-centro .header .menu li{display:inline; font-size:1.5em}
 #col-centro .header .menu li a{text-decoration:none; color:#0396ad}

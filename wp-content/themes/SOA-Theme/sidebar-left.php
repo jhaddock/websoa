@@ -1,6 +1,6 @@
 <div id="col-izquierda" class="span-5 columna">
     <img src="<?php soa_image('soa-staff.png') ?>" alt="SOA Staff"/>
-    <ul class="menu">
+    <!--<ul class="menu">
         <li><a href="<?php page_url('State of the art')?>"><?php _e('State of the art') ?></a></li>
         <li><a href="<?php page_url('Garantia SOA') ?>"><?php _e('Garantía SOA') ?></a></li>
         <li><a href="<?php page_url('Good Staff') ?>"><?php _e('Good staff') ?></a></li>
@@ -8,7 +8,17 @@
         <li><a href="<?php page_url('Contacto') ?>"><?php _e('Contacto') ?></a></li>
         <li><a href="<?php page_url('Eres SOA?') ?>"><?php _e('Eres SOA?') ?></a></li>
         <li><a href="<?php page_url('Blog') ?>"><?php _e('Blog') ?></a></li>
-    </ul>
+    </ul>-->
+
+
+     <?php $nav_args = array(
+      'menu'            => 'Navegacion',
+      'container'       => false,
+      'menu_class'      => 'menu',
+      'echo'            => true,
+      'fallback_cb'     => false);
+    ?>
+    <?php wp_nav_menu($nav_args); ?>
     <div class="follow">
         <p>Follow us</p>
         <ul>
