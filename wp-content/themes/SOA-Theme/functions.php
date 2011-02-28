@@ -232,7 +232,8 @@ function soa_random_img_shortcode(){
     if ($imgs = getDirectoryList('./wp-content/uploads/soa_random_images')){
 //    if ($imgs = getDirectoryList('.')){
         $i = rand(0,count($imgs)-1);
-        $path_to_image = home_url() . "/wp-content/uploads/soa_random_images/$imgs[$i]";
+        $home_url = str_replace("/en/", "", home_url()); //in order to support i18n
+        $path_to_image = $home_url . "/wp-content/uploads/soa_random_images/$imgs[$i]";
         $html = "<img class='soa_random_img' src='$path_to_image' />";
         return $html;
     }
@@ -252,7 +253,8 @@ function soa_random_img_mini_gallery_shortcode($args){
         $html = "";
         shuffle($imgs);
         foreach ($imgs as $img) {
-            $path_to_image = home_url() . "/wp-content/uploads/soa_random_images/$img";
+            $home_url = str_replace("/en/", "", home_url()); //in order to support i18n
+            $path_to_image = $home_url . "/wp-content/uploads/soa_random_images/$img";
             $html .= html_tag("li", "", "", "<img src='$path_to_image' />");
         }
         $html = html_tag("ul", "", "", $html);
@@ -284,12 +286,13 @@ function soa_random_img_mini_gallery_shortcode2($args){
         $div_random_class = rand(0,35000);
         shuffle($imgs);
         foreach ($imgs as $img) {
-            $path_to_image = home_url() . "/wp-content/uploads/soa_random_images/$img";
+            $home_url = str_replace("/en/", "", home_url()); //in order to support i18n
+            $path_to_image = $home_url . "/wp-content/uploads/soa_random_images/$img";
             $html .= html_tag("li", "", "", "<a class='thumb' href='$path_to_image' title='$img'>$img</a>");
         }
         $html = html_tag("ul", "thumbs", "", $html, "display:none;");
         $html = html_tag("div", "thumbs", "$div_random_class", $html);
-        $html .= "<div id='large_gallery_wrapper' style='height:133px;widht:133px'>
+        $html .= "<div id='large_gallery_wrapper' style='height:133px;'>
                     <div class='slideshow'  id='slideshow_$div_random_class' ></div>
                  </div> ";
 //        echo $html;

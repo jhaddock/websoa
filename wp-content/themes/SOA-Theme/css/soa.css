@@ -163,7 +163,8 @@ body {background: url(../images/background.png) 0 0;}
 
 
 /*#col-derecha   {-webkit-box-shadow:10px 0px 50px 0px #444; -moz-box-shadow:10px 0px 40px 0px #444; padding:0px;}*/
-#col-derecha ul {padding:0px; margin:70px auto; width:162px; list-style-type:none;}
+#col-derecha ul {padding:0px; width:162px; list-style-type:none;}
+#col-derecha ul.archive, #col-derecha ul.wp-categories, #col-derecha ul.tags, #col-derecha ul.blog_resume {margin:70px auto;}
 #col-derecha ul li.first {font-size:1.3em; font-family: "Museo500","Lucida Grande", Verdana, Arial, sans-serif;text-align:center; font-weight:bold}
 #col-derecha ul li a{text-decoration:none; margin:0; color:#0396ad}
 

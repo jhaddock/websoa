@@ -27,11 +27,19 @@
         </ul>
     </div>
     <div class="politica">
-        <ul>
+<!--        <ul>
             <li><a href="#">Privacidad</a></li>
             <li><a href="#">Pol&iacute;tica de uso</a></li>
             <li><a href="#">Contacto</a></li>
-        </ul>
+        </ul>-->
+        <?php $legal_nav_args = array(
+      'menu'            => 'Legal',
+      'container'       => false,
+      'menu_class'      => false,
+      'echo'            => true,
+      'fallback_cb'     => false);
+    ?>
+    <?php wp_nav_menu($legal_nav_args); ?>
         <p>&copy; SOA Staff 2010</p>
         <p>Dise&ntilde;ado por <a href="http://masenelinterior.es/">M&aacute;s en el interior</a></p>
     </div>
