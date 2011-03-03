@@ -26,6 +26,8 @@ body,html{height:100%;}
 #cover .footer .logo img{margin-top:0px;}
 #cover .footer .enter_and_contact{float:right; text-align:right;line-height: 0px;margin:50px 40px 0 0;font-size:1.1em;font-weight:bold;}
 #cover .footer .enter_and_contact .enter{font-size: 30px;color:#0396ad; text-decoration: none}
+#cover .footer .enter_and_contact .enter a{color:#0396ad; text-decoration: none}
+#cover .footer .enter_and_contact .enter a:hover{text-decoration: underline}
 #cover .footer .enter_and_contact .contact{ margin-top: 50px}
 #cover .header ul {width:990px;margin:0;padding:0;height:121px;overflow:hidden;}
 #cover .header ul li{width:990px;margin:0;padding:0;text-align:center;height:121px;line-height:121px;font-size:4.5em;font-weight:bold;}
