@@ -43,14 +43,12 @@
 		<div class="content"></div>
 		<div class="footer clearfix">
 			<div class="logo">
-				<a href="state-of-the-art"><img src="wp-content/themes/SOA-Theme
-/images/soa-staff-cover.png"/></a>
+				<a href="state-of-the-art"><img src="wp-content/themes/SOA-Theme/images/soa-staff-cover.png"/></a>
 			</div>
-			<div class="contact">
-				Julián Romea 5, entreplanta D, 28003 Madrid
-			    Teléfono: +34 915 357 651
-				info@soastaff.com
-			</div>
+                        <div class="enter_and_contact">
+                            <a href="state-of-the-art" class="enter">pincha para entrar / click to enter</a>
+                            <p class="contact">Jssulián Romea 5, entreplanta D, 28003 Madrid Teléfono: +34 915 357 651 info@soastaff.com</p>
+                        </div>
 		</div>
 	</div>
 
